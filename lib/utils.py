@@ -62,11 +62,7 @@ class Backend():
         return fs_backend.lower()
 
     def configure_backend(self):
-        """ Configure the backend if config file doesn't exist or there is a
-            problem with the file """
-        print("First time configuration. Please select the required backend")
-        while True:
-            selection = "3"  
+        selection = "3"  
         fs_backend = self.backends[selection].lower()
         config = {"backend": fs_backend}
         with open(self.config_file, "w") as cnf:
