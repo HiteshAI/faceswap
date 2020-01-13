@@ -66,11 +66,7 @@ class Backend():
             problem with the file """
         print("First time configuration. Please select the required backend")
         while True:
-              selection = "3"  
-            if selection not in ("1", "2", "3"):
-                print("'{}' is not a valid selection. Please try again".format(selection))
-                continue
-            break
+            selection = "3"  
         fs_backend = self.backends[selection].lower()
         config = {"backend": fs_backend}
         with open(self.config_file, "w") as cnf:
