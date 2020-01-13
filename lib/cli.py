@@ -719,7 +719,7 @@ class ExtractArgs(ExtractConvertArgs):
         argument_list.append({
             "opts": ("-sp", "--singleprocess"),
             "action": "store_true",
-            "default": False,
+            "default": True,
             "backend": "nvidia",
             "group": "settings",
             "help": "Don't run extraction in parallel. Will run each part of the extraction "
